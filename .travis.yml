@@ -1,0 +1,29 @@
+os: osx
+
+osx_image: xcode9.3
+
+sudo: false
+
+cache: Unity_WebGL.pkg
+
+install:
+- sudo -E sh ./Scripts/install.sh
+
+jobs:
+  include:
+    - stage: warm up cache
+      script: true
+    - stage: build app
+    script: true
+    - stage: run tests
+      script: true
+    - stage: run tests
+      script: true
+    - stage: deploy
+      script: true
+
+after_failure:
+- cat ./build-job.log
+
+after_success:
+- echo "[test log] build succeed"
