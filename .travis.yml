@@ -4,7 +4,9 @@ osx_image: xcode9.3
 
 sudo: false
 
-cache: Unity_WebGL.pkg
+cache:
+  directories:
+    - ./
 
 install:
 - sudo -E sh ./scripts/install-dependencies.sh
@@ -17,7 +19,7 @@ jobs:
       script: true
     - stage: run tests
       script: true
-    - 
+    -
       script: true
     - stage: deploy to staging
       script: true
