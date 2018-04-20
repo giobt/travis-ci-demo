@@ -7,7 +7,7 @@ sudo: false
 cache: Unity_WebGL.pkg
 
 install:
-- sudo -E sh ./Scripts/install.sh
+- sudo -E sh ./scripts/install.sh
 
 jobs:
   include:
