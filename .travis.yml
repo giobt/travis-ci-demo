@@ -14,7 +14,7 @@ jobs:
     - stage: warm up cache
       script: true
     - stage: build app
-    script: true
+      script: true
     - stage: run tests
       script: true
     - stage: run tests
