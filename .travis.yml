@@ -17,10 +17,14 @@ jobs:
       script: true
     - stage: run tests
       script: true
-    - stage: run tests
+    - 
       script: true
-    - stage: deploy
+    - stage: deploy to staging
       script: true
+      if: branch = staging
+    - stage: deploy to master
+      script: true
+      if: branch = master
 
 after_failure:
 - cat ./build-job.log
